@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trimmi Tiles Calculator</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+<body class="main-layout">
+  <header>
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+            <div class="full">
+              <div class="center-desk">
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+            <nav class="navigation navbar navbar-expand-md navbar-dark ">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog.html">Savings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="choose">
+    <div class="container">
+      <div class="titlepage">
+        <h2>Break-Even Calculator</h2>
+        <p>Enter the number of cows in your barn:</p>
+        <input type="number" id="numberOfCows" value="1000" style="text-align:center;">
+        <button onclick="calculateBreakEven()">Calculate Break-Even</button>
+        <table class="table table-striped mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Cost Category</th>
+              <th scope="col">Cost (USD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total Cost with Trimmi Tiles</td>
+              <td id="totalCostTiles">$125,497.49</td>
+            </tr>
+            <tr>
+              <td>Total Hoove Trimming Cost without Trimmi Tiles</td>
+              <td id="totalCostHoove">$4,785.10</td>
+            </tr>
+            <tr>
+              <td>Total Savings with Trimmi Tiles</td>
+              <td id="totalSavings">$2,392.55</td>
+            </tr>
+            <tr>
+              <td>Cost per Case of Lameness</td>
+              <td id="costPerCase">$336.91</td>
+            </tr>
+            <tr>
+              <td>Cost of Reduced Milk Production</td>
+              <td id="costReducedMilk">$33,691.00</td>
+            </tr>
+            <tr>
+              <td>Years to Break-Even</td>
+              <td id="breakEvenYears">3.48</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<!--  footer -->
+<footer id="contact">
+   <div class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="titlepage">
+                  <h2>Contact Us</h2>
+               </div>
+            </div>
+            <div class="col-md-12">
+               <form id="request" class="main_form">
+                  <div class="row">
+                     <div class="col-md-3 ">
+                        <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
+                     </div>
+                     <div class="col-md-3">
+                        <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                     </div>
+                     <div class="col-md-3">
+                        <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                        <ul class="social_icon">
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                     <div class="col-md-8">
+                        <textarea class="contactus1" placeholder="Message" type="type" Message="Name">Message </textarea>
+                     </div>
+                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <button class="send_btn">Send</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="col-md-3 border_right">
+               <ul class="location_icon">
+                  <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Location</li>
+                  <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a> +1 9087654321</li>
+                  <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>trimmitiles@gmail.com</li>
+               </ul>
+            </div>
+            <div class="col-md-3 border_right">
+               <h3>Useful Link</h3>
+               <ul class="link">
+                  <li><a href="#">Partners </a></li>
+                  <li><a href="#">Demos </a> </li>
+                  <li><a href="#">Blog Posts</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 border_right">
+               <h3>Menus</h3>
+               <ul class="link">
+<li><a href="index.html">Home</a></li>                             
+<li><a href="about.html">About</a></li>                                                     
+<li><a href="products.html">Products</a></li>                             
+<li><a href="blog.html">Blog</a></li>
+<li><a href="contact.html">Contact</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <form class="bottom_form">
+                  <h3>Newsletter</h3>
+                  <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                  <button class="sub_btn">subscribe</button>
+               </form>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div class="footer">
+           <div class="container">
+             <div class="row">
+               <div class="col-md-12">
+                 <p>© 2024 Trimmi Tiles | Design by: Trimmi Tiles Team</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </footer>
+<!-- end footer -->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+  function calculateBreakEven() {
+    var cows = document.getElementById('numberOfCows').value;
+    var totalCostTiles = 125497.49;
+    var totalCostHoove = 4785.10;
+    var totalSavings = 2392.55;
+    var costPerCase = 336.91;
+    var costReducedMilk = 33691;
+
+    document.getElementById('totalCostTiles').innerHTML = "$" + (totalCostTiles * cows / 1000).toFixed(2);
+    document.getElementById('totalCostHoove').innerHTML = "$" + (totalCostHoove * cows / 1000).toFixed(2);
+    document.getElementById('totalSavings').innerHTML = "$" + (totalSavings * cows / 1000).toFixed(2);
+    document.getElementById('costPerCase').innerHTML = "$" + (costPerCase * (0.22 * cows * 0.12)).toFixed(2);
+    document.getElementById('costReducedMilk').innerHTML = "$" + (costReducedMilk * (0.22 * cows * 0.12)).toFixed(2);
+    document.getElementById('breakEvenYears').innerHTML = (3.48 * 1000 / cows).toFixed(2);
+  }
+  </script>
+</body>
+</html>
+
